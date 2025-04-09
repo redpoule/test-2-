@@ -18,4 +18,4 @@ jobs:
           curl -X POST \
           -H "Content-Type: multipart/form-data" \
           -F "file=@data/SURVIE1_2025-04-08-23-33-33.savegame" \
-          ${{ secrets.DISCORD_WEBHOOK_URL }}
+          ${{ https://discord.com/api/webhooks/1359583001130045732/9nfc1T5jLuOpDANC18g2GCi3QNjWXMDnEbfDM6HBqVjpftkyHLktL3jkF6FVMG3lMI5o }}
