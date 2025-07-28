@@ -1,21 +1,60 @@
-name: Send File to Discord Every Hour
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Démarrer le serveur Aternos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #1f1f1f;
+      color: #fff;
+      text-align: center;
+      padding: 50px;
+    }
 
-on:
-  schedule:
-    - cron: '0 * * * *'  # Toutes les heures
-  workflow_dispatch:      # Permet aussi de lancer manuellement
+    h1 {
+      color: #00ff88;
+    }
 
-jobs:
-  send_file:
-    runs-on: ubuntu-latest
+    button {
+      padding: 15px 30px;
+      font-size: 20px;
+      background-color: #00ff88;
+      color: #000;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
 
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+    button:hover {
+      background-color: #00cc6e;
+    }
 
-      - name: Send file to Discord
-        run: |
-          curl -X POST \
-          -H "Content-Type: multipart/form-data" \
-          -F "file=@data/SURVIE1_2025-04-08-23-33-33.savegame" \
-          ${{ https://discord.com/api/webhooks/1359583001130045732/9nfc1T5jLuOpDANC18g2GCi3QNjWXMDnEbfDM6HBqVjpftkyHLktL3jkF6FVMG3lMI5o }}
+    .note {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    .footer {
+      margin-top: 60px;
+      font-size: 12px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎮 Lancer le serveur Minecraft</h1>
+  <p>Appuie sur le bouton pour accéder à la page Aternos.</p>
+  <a href="https://aternos.org/servers/" target="_blank">
+    <button>Lancer le serveur</button>
+  </a>
+  <p class="note">(Tu dois être connecté à Aternos et avoir les droits pour démarrer le serveur)</p>
+
+  <div class="footer">
+    Fait par ton pote 😎 – Héberge sur GitHub Pages ou Netlify
+  </div>
+</body>
+</html>
